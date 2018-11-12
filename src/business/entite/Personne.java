@@ -24,6 +24,7 @@ public class Personne {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.age = age;
+		this.sexe = sexe;
 	}
 
 	public long getId() {

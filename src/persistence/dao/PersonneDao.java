@@ -16,11 +16,11 @@ public class PersonneDao implements IDAO<Personne>{
 
 	Connection cnx = null;
 
-	private final static String sql1 = "select * from personne";
-	private final static String sql1Id = "select * from personne where id = ?";
-	private final static String sql2 = "insert into personne (nom, prenom, age, sexe) values (?,?,?,?)";
-	private final static String sql3 = "update personne set nom = ?, prenom = ?, age = ?, sexe =  where id = ?";
-	private final static String sql4 = "delete personne from personne where id = ?";
+	private final static String sql1 = "select * from clients";
+	private final static String sql1Id = "select * from clients where id = ?";
+	private final static String sql2 = "insert into clients (nom, prenom, age, sexe) values (?,?,?,?)";
+	private final static String sql3 = "update clients set nom = ?, prenom = ?, age = ?, sexe =  where id = ?";
+	private final static String sql4 = "delete clients from clients where id = ?";
 	
 
 	@Override
@@ -45,6 +45,7 @@ public class PersonneDao implements IDAO<Personne>{
 					pT.setId(id);
 				}
 			}
+			
 			else {
 				pT = null;
 			}
