@@ -14,10 +14,10 @@ public class PersonneDao implements IDAO<Personne>{
 	Connection cnx = null;
 	
 	private final String sql1 = "select * from personne";
-	private final static String sql2 = "insert into personne (nom, prenom, sexe, age) values (?,?,?,?)";
-	private final static String sql3 = "update equipe set name = ?, budget = ? where id = ?";
-	private final static String sql4 = "delete equipe from equipe where id = ?";
-	private final static String sql5 = "select * from equipe where id = ?";
+	private final static String sql2 = "insert into personne (nom, prenom, age, sexe) values (?,?,?,?)";
+	private final static String sql3 = "update personne set nom = ?, prenom = ?, age = ?, sexe = ? where id = ?";
+	private final static String sql4 = "delete personne from personne where id = ?";
+	private final static String sql5 = "select * from personne where id = ?";
 
 	@Override
 	public Personne create(Personne pT) throws DaoException {
