@@ -79,6 +79,23 @@ public class PersonneDao implements IDAO<Personne>{
 	@Override
 	public void deleteById(long pId) throws DaoException {
 		// TODO Auto-generated method stub
+		try {
+			cnx = JDBCManagerSolo.getInstance().openConection();
+			PreparedStatement pst = cnx.prepareStatement(sql4);
+			pst.setLong(1, pId);
+			pst.execute();
+			
+		}
+		catch (Exception e) {
+			throw new DaoException(e);
+		}
+		finally {
+			try {
+				JDBCManagerSolo.getInstance().closeConnection();
+			} catch (Exception e) {
+				throw new DaoException(e);
+			}
+		}		
 		
 	}
 
