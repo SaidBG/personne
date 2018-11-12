@@ -6,11 +6,20 @@ public class Personne {
 	private String nom;
 	private String prenom;
 	private int age;
+	private String sexe;
 	
+	public String getSexe() {
+		return sexe;
+	}
+
+	public void setSexe(String sexe) {
+		this.sexe = sexe;
+	}
+
 	public Personne() {
 	}
 	
-	public Personne(long id, String nom, String prenom, int age) {
+	public Personne(long id, String nom, String prenom, int age, String sexe) {
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
